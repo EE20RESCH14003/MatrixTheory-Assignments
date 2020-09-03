@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\title{\textbf{Assignment-1} \vspace{5mm}\\ Mukul Kumar Yadav}  
+
+\begin{document}
+\maketitle
+\begin{flushleft}	
+
+\textbf{Problem Statement (Q.No.62):} \vspace{5mm}\\
+\textit{A line perpendicular to the line segment joining the points (1,0) and (2,3) divides it into the ratio 1:n. Find the equation of the line.} \vspace{5mm} 
+
+\textbf{Solution:} \vspace{5mm}\\
+\begin{center}
+    
+\begin{tikzpicture}
+
+\coordinate [label=right:$A$] (A) at (1,0);
+\coordinate [label=right:$B$] (B) at (2,3);
+\coordinate [label=right:$P$] (P) at (1.5,1.5);
+\coordinate [label=right:$R$] (R) at (-2,4);
+\coordinate [label=left:$O$] (O) at (0,0);
+\draw (A) -- (B);
+\draw (P) -- (R);
+\draw [dash dot] (O) - -(A)
+\draw [dash dot] (O) - -(P)
+\draw [dash dot] (O) - -(B)
+\end{tikzpicture} 
+\end{center} \\
+Given that
+$A=
+\begin{pmatrix} 
+1 \\
+0
+\end{pmatrix} and B=
+\begin{pmatrix} 
+2 \\
+3
+\end{pmatrix}.
+
+Let P= \begin{pmatrix} 
+x \\
+y
+\end{pmatrix} and origin O = \begin{pmatrix} 
+0 \\
+0
+\end{pmatrix}. Since the line RP intersect the line AB in 1:n ration, then 
+$ \frac{AP}{PB} = \frac{1}{n} $. PB = n.AP or OB-OP = n(OP-OA). Solving this vector equation, OP = \dfrac{OB+n.OA}{n+1}\\
+
+Therefore, \begin{pmatrix} 
+x \\
+y
+\end{pmatrix} = \begin{pmatrix}
+\dfrac{(n+2)}{(n+1)} \\ 
+\dfrac{3}{n+1} 
+\end{pmatrix}\\
+Vector equation of Line RP, $\textbf{r} = \textbf{p} + \lambda. \textbf{d} $, where  \textbf{p} is point on the line, \lambda \ is \ constant, and \ \textbf{d} \  is \ direction \ vector \ of \ the \ line. \\
+
+Since the line segment AB and the line RP is perpendicular to each other then dot product of both the vectors will be zero.\\
+
+AB.d = 0. \Longrightarrow 
+$\begin{pmatrix} 
+2-1 \\
+3-0
+\end{pmatrix}^T. \begin{pmatrix} 
+x \\
+y
+\end{pmatrix} = 0$
+$\Longrightarrow x+3y = 0. $
+x= 3 and y = -1. Therefore, direction vector \textbf{d} = \begin{pmatrix} 
+3 \\
+-1
+\end{pmatrix} $ \\ 
+Final vector equation of the line is \textbf{r} = 
+\begin{pmatrix}
+\dfrac{(n+2)}{(n+1)} \\ 
+\dfrac{3}{n+1} 
+\end{pmatrix} + \lambda. \begin{pmatrix} 
+3 \\
+-1
+\end{pmatrix}
+
+\end{flushleft}
+
+\end{document}
